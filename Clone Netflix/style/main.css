@@ -1,3 +1,74 @@
-body{
-  background-color: blue;
+:root{
+  /* definindo uma variável para determinadas cores no CSS. Como vou usar o vermelho e o preto padrão várias 
+  vezes no meu CSS, se eu for mudar em alguma classe ou qqr coisa, ele vai mudar em todas, e eu não preciso 
+  mudar em caaada classe e parte do arquivo. */
+  --vermelho: #E50914;
+  --preto: #141414;
+
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  /* aplicando a variavel --preto para o fundo*/
+  background: var(--preto);
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+
+header .container{
+  /* fazendo ele ficar em flexbox, vai alinhado tudo na tela, em LINHA*/
+  display: flex;
+  /* por padrão quando uso flexbox, ele ja alinha tudo como row, linha. vou botar so pra ter*/
+  flex-direction: row;
+  /* alinhando as coisas no centro*/
+  align-items: center;
+  /* quero um espaço entre o H2 e o nav. O aligh itens alinha na vertical, 
+  o justify content, alinha na horizontal (dentro do meu container)*/
+  justify-content: space-between;
+}
+
+header .logo{
+  margin-left: 5px;
+  color: var(--vermelho);
+  font-family: 'Arial Black', Times;
+  font-size: 40px;
+}
+
+header nav a{
+  text-decoration: none;
+  color: #AAA;
+  margin-right: 10px;
+}
+
+header nav a:hover{
+  color: #fff;
+
+}
+
+/*Sobre o filme principal abaixo*/
+.filme-principal{
+  font-size: 16px;
+  background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/dexter.jpg');
+  text-align: justify;
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filme-principal .descricao{
+  margin-bottom: 40px;
+  
+}
+
+.titulo{
+  font-size: 40px;
+}
+
